@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222.2 47.4% 11.2%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 47.4% 15.2%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 47.4% 15.2%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217.2 32.6% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 25%;
+    --input: 217.2 32.6% 25%;
+    --ring: 142 76% 36%;
+
+    --chart-1: 142 76% 36%;
+    --chart-2: 217 91% 60%;
+    --chart-3: 47 80% 57%;
+    --chart-4: 0 72% 51%;
+    --chart-5: 246 70% 50%;
+
+    --radius: 0.5rem;
+
+    /* Custom Casino colors */
+    --dark-primary: 210 30% 10%;
+    --dark-secondary: 210 28% 16%;
+    --accent-green: 142 76% 36%;
+    --accent-gold: 51 100% 50%;
+    --accent-blue: 210 79% 53%;
+    --status-red: 6 78% 57%;
+    --status-green: 145 63% 49%;
+    --text-secondary: 214 16% 66%;
+  }
+
+  .dark {
+    --background: 222.2 47.4% 11.2%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 47.4% 15.2%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 47.4% 15.2%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217.2 32.6% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 25%;
+    --input: 217.2 32.6% 25%;
+    --ring: 142 76% 36%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Casino-specific styles */
+.bg-dark-primary {
+  background-color: hsl(var(--dark-primary));
+}
+
+.bg-dark-secondary {
+  background-color: hsl(var(--dark-secondary));
+}
+
+.text-accent-green {
+  color: hsl(var(--accent-green));
+}
+
+.text-accent-gold {
+  color: hsl(var(--accent-gold));
+}
+
+.text-accent-blue {
+  color: hsl(var(--accent-blue));
+}
+
+.bg-accent-green {
+  background-color: hsl(var(--accent-green));
+}
+
+.bg-accent-blue {
+  background-color: hsl(var(--accent-blue));
+}
+
+.bg-accent-gold {
+  background-color: hsl(var(--accent-gold));
+}
+
+.text-muted-foreground {
+  color: hsl(var(--text-secondary));
+}
+
+.game-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.game-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.crash-graph {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.dice-cube {
+  transition: transform 0.6s;
+}
+
+.dice-cube:hover {
+  transform: rotateY(180deg);
+}

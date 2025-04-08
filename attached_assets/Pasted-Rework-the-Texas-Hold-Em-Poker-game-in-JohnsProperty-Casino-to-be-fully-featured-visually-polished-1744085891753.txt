@@ -1,0 +1,83 @@
+Rework the Texas Hold 'Em Poker game in JohnsProperty Casino to be fully featured, visually polished, and cryptographically fair. This is a solo poker game against a single AI opponent.
+🃏 Core Requirements:
+🎴 Cards:
+
+    Use a cryptographically secure random number generator (CSPRNG) (e.g., crypto.getRandomValues() in JS or crypto.randomBytes() in Node.js) for all card shuffling and dealing to ensure fairness and unpredictability.
+
+    Full 52-card deck:
+
+        Ranks: 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A (in that order)
+
+        Suits: Clubs ♣, Spades ♠, Diamonds ♦, Hearts ♥
+
+    Aces can be high or low, depending on hand type (e.g., A-2-3-4-5 straight).
+
+✨ Card Design:
+
+    Cards should have a sleek, modern design with:
+
+        Sharp visuals
+
+        Animated flips and dealing transitions
+
+        Suit icons and values clearly visible
+
+        Back-of-card design for hidden cards
+
+🤖 AI Opponent:
+
+    Implement a basic AI opponent with rules-based decision-making:
+
+        Can fold, check, call, raise based on hand strength and random bluff factor
+
+        Bluffing probability can be adjusted dynamically
+
+🕹️ Gameplay:
+
+    Full Texas Hold ’Em Poker rules:
+
+        Two hole cards per player
+
+        Community cards dealt in this order:
+
+            The Flop (3 cards)
+
+            The Turn (1 card)
+
+            The River (1 card)
+
+        Standard betting rounds: pre-flop, post-flop, turn, river
+
+        Winning hand determined at showdown (based on poker hand rankings)
+
+💥 Animations:
+
+    Smooth, elegant animations for:
+
+        Dealing hole cards to players
+
+        Dealing the flop, turn, and river (cards appear one-by-one with animation)
+
+        Revealing the AI’s hand at showdown
+
+        Chips moving to winner’s side or center pot animations
+
+💬 UI Elements:
+
+    Player and AI cards displayed clearly
+
+    Chip amounts and bet actions (fold, check, raise, call)
+
+    Pot display and betting history/log
+
+    Optional: hand rank evaluator to show what hand the user has (e.g., "Pair of Queens")
+
+✅ Additional Notes:
+
+    Use modular, clean code so it’s easy to extend later (e.g., multiplayer or tournaments)
+
+    If possible, include debug/developer tools to see how the AI is making decisions (for testing fairness)
+
+    Ensure that the deck is freshly shuffled before each game and never repeats within the same round
+
+Stack preference: JavaScript/TypeScript with React frontend. Backend can be Node.js if needed for randomness or user state tracking.
